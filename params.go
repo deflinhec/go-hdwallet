@@ -13,7 +13,6 @@ var (
 	DASHParams       = chaincfg.MainNetParams
 	BCHParams        = chaincfg.MainNetParams
 	QTUMParams       = chaincfg.MainNetParams
-	USDTParams       = chaincfg.MainNetParams
 )
 
 func init() {
@@ -47,10 +46,4 @@ func init() {
 	QTUMParams.PubKeyHashAddrID = 0x3a // 58
 	QTUMParams.ScriptHashAddrID = 0x32 // 50
 	QTUMParams.PrivateKeyID = 0x80     // 128
-
-	// usdt net params
-	// https://github.com/OmniLayer/omnicore/blob/master/src/chainparams.cpp
-	USDTParams.PubKeyHashAddrID = 0x00 // 0
-	USDTParams.ScriptHashAddrID = 0x05 // 5
-	USDTParams.PrivateKeyID = 0x80     // 128
 }

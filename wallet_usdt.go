@@ -5,14 +5,14 @@ func init() {
 }
 
 type usdt struct {
-	*btc
+	*trx
 }
 
 func newUSDT(key *Key) Wallet {
-	token := newBTC(key).(*btc)
+	token := newTRX(key).(*trx)
 	token.name = "Tether"
 	token.symbol = "USDT"
-	token.key.Opt.Params = &USDTParams
+	token.contract = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
 
-	return &usdt{btc: token}
+	return &usdt{trx: token}
 }

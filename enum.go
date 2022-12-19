@@ -13,6 +13,7 @@ const (
 	ZeroQuote uint32 = 0x80000000
 	BTCToken  uint32 = 0x10000000
 	ETHToken  uint32 = 0x20000000
+	TRXToken  uint32 = 0x30000000
 )
 
 // wallet type from bip44
@@ -26,10 +27,11 @@ const (
 	ETH        = ZeroQuote + 60
 	ETC        = ZeroQuote + 61
 	BCH        = ZeroQuote + 145
+	TRX        = ZeroQuote + 195
 	QTUM       = ZeroQuote + 2301
 
-	// btc token
-	USDT = BTCToken + 1
+	// trx token
+	USDT = TRXToken + 1
 
 	// eth token
 	IOST = ETHToken + 1
@@ -37,7 +39,7 @@ const (
 )
 
 var coinTypes = map[uint32]uint32{
-	USDT: BTC,
+	USDT: TRX,
 	IOST: ETH,
 	USDC: ETH,
 }
